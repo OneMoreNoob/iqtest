@@ -31,7 +31,14 @@ margen = 1/(w*w');
 
 % calcular parametros de la frontera lineal
 
+m = w(1)/w(2) ;
+b = w0/w(2);
+recta = -m - b;
 % representar graficamente
+
+
+
+
 
 
 % no separable
