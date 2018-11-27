@@ -10,13 +10,13 @@ load('data/usps/tslabels.dat');
 posiciones_0 = find(trlabels == 0);
 data_0 = tr(posiciones_0, :);
 labels_0 = trlabels(posiciones_0, :);
-posiciones_1 = find(trlabels_1 == 1);
+posiciones_1 = find(trlabels == 1);
 data_1 = tr(posiciones_1, :);
 labels_1 = trlabels(posiciones_1, :);
-posiciones_2 = find(trlabels_2 == 2);
+posiciones_2 = find(trlabels == 2);
 data_2 = tr(posiciones_2, :);
 labels_2 = trlabels(posiciones_2, :);
-posiciones_3 = find(trlabels_3 == 3);
+posiciones_3 = find(trlabels == 3);
 data_3 = tr(posiciones_3, :);
 labels_3 = trlabels(posiciones_3, :);
 
