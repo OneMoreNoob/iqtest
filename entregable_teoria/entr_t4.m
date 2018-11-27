@@ -37,8 +37,8 @@ res_03 = svmtrain([labels_0; labels_3], [data_0; data_3], "");
 # 1 vs 2
 res_12 = svmtrain([labels_1; labels_2], [data_1; data_2], "");
 
-# 1 vs 2
-res_12 = svmtrain([labels_1; labels_2], [data_1; data_2], "");
+# 1 vs 3
+res_13 = svmtrain([labels_1; labels_3], [data_1; data_3], "");
 
 # 2 vs 3
 res_23 = svmtrain([labels_2; labels_3], [data_2; data_3], "");
