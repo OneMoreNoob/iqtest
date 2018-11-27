@@ -44,14 +44,22 @@ res_12 = svmtrain([labels_1, labels_2], [data_1, data_2], "");
 res_23 = svmtrain([labels_2, labels_3], [data_2, data_3], "");
 
 # predict
-[predicted_labels_01, accuracy, decision_values] = svmpredict(labels_test, data_test, res_01);
-[predicted_labels_02, accuracy, decision_values] = svmpredict(labels_test, data_test, res_02);
-[predicted_labels_03, accuracy, decision_values] = svmpredict(labels_test, data_test, res_03);
-[predicted_labels_12, accuracy, decision_values] = svmpredict(labels_test, data_test, res_12);
-[predicted_labels_13, accuracy, decision_values] = svmpredict(labels_test, data_test, res_13);
-[predicted_labels_23, accuracy, decision_values] = svmpredict(labels_test, data_test, res_23);
+predicted_labels_01 = svmpredict(labels_test, data_test, res_01);
+predicted_labels_02 = svmpredict(labels_test, data_test, res_02);
+predicted_labels_03 = svmpredict(labels_test, data_test, res_03);
+predicted_labels_12 = svmpredict(labels_test, data_test, res_12);
+predicted_labels_13 = svmpredict(labels_test, data_test, res_13);
+predicted_labels_23 = svmpredict(labels_test, data_test, res_23);
 
+labels = [predicted_labels_01 predicted_labels_02 predicted_labels_03 predicted_labels_12 predicted_labels_13 predicted_labels_23];
 
+votes = [];
+votes = mode(labels')'; # cual se repite mas
+
+n_elements = rows(labels);
+correct_predictions = sum(votes == labels_test);
+
+accuracy = correct_predictions / n_elements
 
 
 ####  CLASIFICADOR DAG DE 4 CLASES ####
