@@ -24,7 +24,8 @@ posiciones_test = find(tslabels < 4);
 data_test = ts(posiciones_test, :);
 labels_test = tslabels(posiciones_test, :);
 
-#### CLASIFICADOR POR VOTACION DE 4 CLASES ####
+#### CLASIFICADORES 1vs1 Y PREDICCIONES ####
+
 # 0 vs 1
 res_01 = svmtrain([labels_0; labels_1], [data_0; data_1], "");
 
@@ -53,6 +54,7 @@ predicted_labels_23 = svmpredict(labels_test, data_test, res_23);
 
 labels = [predicted_labels_01 predicted_labels_02 predicted_labels_03 predicted_labels_12 predicted_labels_13 predicted_labels_23];
 
+#### CLASIFICADOR POR VOTACION DE 4 CLASES ####
 votes = [];
 votes = mode(labels')'; # cual se repite mas
 
@@ -63,7 +65,30 @@ accuracy = correct_predictions / n_elements
 
 
 ####  CLASIFICADOR DAG DE 4 CLASES ####
+for x = 1:rows(labels)
+    if labels(x,1) == 0             # 0vs1: clasificado como 0
+        if labels(x,2) == 0         # 0vs2: clasificado como 0
+            if labels(x,3) == 0     # 0vs3: clasificado como 0  DEFINITIVO
 
+            else                    # 0vs3: clasificado como 3  DEFINITIVO
+
+        else                        # 0vs2: clasificado como 2
+            if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
+
+            else                    # 2vs3: clasificado como 3  DEFINITIVO
+
+    else                            # 0vs1: clasificado como 1
+        if labels(x,4) == 1         # 1vs2: clasificado como 1
+            if labels(x,5) == 1     # 1vs3: clasificado como 1  DEFINITIVO
+
+            else                    # 1vs3: clasificado como 3  DEFINITIVO
+
+        else                        # 1vs2: clasificado como 2
+            if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
+
+            else                    # 3vs3: clasificado como 3  DEFINITIVO
+            
+end
 
 
 
