@@ -59,37 +59,47 @@ votes = [];
 votes = mode(labels')'; # cual se repite mas
 
 n_elements = rows(labels);
-correct_predictions = sum(votes == labels_test);
+correct_predictions_votes = sum(votes == labels_test);
 
-accuracy = correct_predictions / n_elements
+accuracy_votes = correct_predictions_votes / n_elements
 
 
 ####  CLASIFICADOR DAG DE 4 CLASES ####
-for x = 1:rows(labels)
+dag = zeros(n_elements, 1);
+for x = 1:n_elements
     if labels(x,1) == 0             # 0vs1: clasificado como 0
         if labels(x,2) == 0         # 0vs2: clasificado como 0
             if labels(x,3) == 0     # 0vs3: clasificado como 0  DEFINITIVO
-
+                dag(x,1) = 0;
             else                    # 0vs3: clasificado como 3  DEFINITIVO
-
+                dag(x,1) = 3;
         else                        # 0vs2: clasificado como 2
             if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
+                dag(x,1) = 2;
 
             else                    # 2vs3: clasificado como 3  DEFINITIVO
+                dag(x,1) = 3;
 
     else                            # 0vs1: clasificado como 1
         if labels(x,4) == 1         # 1vs2: clasificado como 1
             if labels(x,5) == 1     # 1vs3: clasificado como 1  DEFINITIVO
+                dag(x,1) = 1;
 
             else                    # 1vs3: clasificado como 3  DEFINITIVO
+                dag(x,1) = 3;
 
         else                        # 1vs2: clasificado como 2
             if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
+                dag(x,1) = 2;
 
             else                    # 3vs3: clasificado como 3  DEFINITIVO
-            
+                dag(x,1) = 3;
+
 end
 
 
+correct_predictions_dag = sum(dag == labels_test);
+
+accuracy_dag = correct_predictions_dag / n_elements
 
 #### COMPARAR LOS MEJORES RESULTADOS OBTENIDOS ####
