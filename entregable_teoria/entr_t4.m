@@ -73,12 +73,15 @@ for x = 1:n_elements
                 dag(x,1) = 0;
             else                    # 0vs3: clasificado como 3  DEFINITIVO
                 dag(x,1) = 3;
+        end
         else                        # 0vs2: clasificado como 2
             if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
                 dag(x,1) = 2;
 
             else                    # 2vs3: clasificado como 3  DEFINITIVO
                 dag(x,1) = 3;
+        end
+    end
 
     else                            # 0vs1: clasificado como 1
         if labels(x,4) == 1         # 1vs2: clasificado como 1
@@ -87,13 +90,15 @@ for x = 1:n_elements
 
             else                    # 1vs3: clasificado como 3  DEFINITIVO
                 dag(x,1) = 3;
-
+        end
         else                        # 1vs2: clasificado como 2
             if labels(x,6) == 2     # 2vs3: clasificado como 2  DEFINITIVO
                 dag(x,1) = 2;
 
             else                    # 3vs3: clasificado como 3  DEFINITIVO
                 dag(x,1) = 3;
+        end
+    end
 
 end
 
