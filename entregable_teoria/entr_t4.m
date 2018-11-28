@@ -27,22 +27,64 @@ labels_test = tslabels(posiciones_test, :);
 #### CLASIFICADORES 1vs1 Y PREDICCIONES ####
 
 # 0 vs 1
-res_01 = svmtrain([labels_0; labels_1], [data_0; data_1], "");
+data_01 = [data_0; data_1];
+labels_01 = [labels_0; labels_1];
+nrows = rows(data_01);
+rand("seed", 27);
+perm = randperm(nrows);
+data_01 = data_01(perm, :);
+labels_01 = labels_01(perm, :);
+res_01 = svmtrain(labels_01, data_01, "");
 
 # 0 vs 2
-res_02 = svmtrain([labels_0; labels_2], [data_0; data_2], "");
+data_02 = [data_0; data_2];
+labels_02 = [labels_0; labels_2];
+nrows = rows(data_02);
+rand("seed", 27);
+perm = randperm(nrows);
+data_02 = data_02(perm, :);
+labels_02 = labels_02(perm, :);
+res_02 = svmtrain(labels_02, data_02, "");
 
 # 0 vs 3
-res_03 = svmtrain([labels_0; labels_3], [data_0; data_3], "");
+data_03 = [data_0; data_3];
+labels_03 = [labels_0; labels_3];
+nrows = rows(data_03);
+rand("seed", 27);
+perm = randperm(nrows);
+data_03 = data_03(perm, :);
+labels_03 = labels_03(perm, :);
+res_03 = svmtrain(labels_03, data_03, "");
 
 # 1 vs 2
-res_12 = svmtrain([labels_1; labels_2], [data_1; data_2], "");
+data_12 = [data_1; data_2];
+labels_12 = [labels_1; labels_2];
+nrows = rows(data_12);
+rand("seed", 27);
+perm = randperm(nrows);
+data_12 = data_12(perm, :);
+labels_12 = labels_12(perm, :);
+res_12 = svmtrain(labels_12, data_12, "");
 
 # 1 vs 3
-res_13 = svmtrain([labels_1; labels_3], [data_1; data_3], "");
+data_13 = [data_1; data_3];
+labels_13 = [labels_1; labels_3];
+nrows = rows(data_13);
+rand("seed", 27);
+perm = randperm(nrows);
+data_13 = data_13(perm, :);
+labels_13 = labels_13(perm, :);
+res_13 = svmtrain(labels_13, data_13, "");
 
 # 2 vs 3
-res_23 = svmtrain([labels_2; labels_3], [data_2; data_3], "");
+data_23 = [data_2; data_3];
+labels_23 = [labels_2; labels_3];
+nrows = rows(data_23);
+rand("seed", 27);
+perm = randperm(nrows);
+data_23 = data_23(perm, :);
+labels_23 = labels_23(perm, :);
+res_23 = svmtrain(labels_23, data_23, "");
 
 # predict
 predicted_labels_01 = svmpredict(labels_test, data_test, res_01);
