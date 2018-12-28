@@ -36,7 +36,7 @@ eq_recta = -m - b;
 tr = load('data/mini/tr.dat');
 trlabels = load('data/mini/trlabels.dat');
 % obtener SVM sin kernel
-res = svmtrain(trlabels, tr, '-t 0 -c 1'); %poner valor grande de c
+res = svmtrain(trlabels, tr, '-t 0 -c 1'); % PONER VALOR GRANDE DE C
 % multiplicadores de Lagrange
 mult_lagrange = res.sv_coef;
 % vectores soporte
