@@ -1,0 +1,165 @@
+########## C = 0.01 ###########
+C =  0.010000
+
+kernel = 0
+Accuracy = 100% (1381/1381) (classification)
+acc =  1
+err = 0
+confidence = 0
+
+kernel =  1
+d =  2
+Accuracy = 98.2621% (1357/1381) (classification)
+acc =  0.98262
+err =  0.017379
+confidence =  0.0068923
+d =  3
+Accuracy = 98.769% (1364/1381) (classification)
+acc =  0.98769
+err =  0.012310
+confidence =  0.0058156
+
+kernel =  2
+Accuracy = 60.6083% (837/1381) (classification)
+acc =  0.60608
+err =  0.39392
+confidence =  0.025771
+
+kernel =  3
+Accuracy = 54.4533% (752/1381) (classification)
+acc =  0.54453
+err =  0.45547
+confidence =  0.026266
+
+
+######### C = 0.1 ##########
+C =  0.10000
+
+kernel = 0
+Accuracy = 99.9276% (1380/1381) (classification)
+acc =  0.99928
+err =    7.2411e-04
+confidence =  0.0014187
+
+kernel =  1
+d =  2
+Accuracy = 99.2035% (1370/1381) (classification)
+acc =  0.99203
+err =  0.0079652
+confidence =  0.0046884
+d =  3
+Accuracy = 99.0587% (1368/1381) (classification)
+acc =  0.99059
+err =  0.0094135
+confidence =  0.0050931
+
+kernel =  2
+Accuracy = 73.7147% (1018/1381) (classification)
+acc =  0.73715
+err =  0.26285
+confidence =  0.023216
+
+kernel =  3
+Accuracy = 43.0123% (594/1381) (classification)
+acc =  0.43012
+err =  0.56988
+confidence =  0.026112
+
+########## C = 1 #########
+C =  1
+
+kernel = 0
+Accuracy = 99.7104% (1377/1381) (classification)
+acc =  0.99710
+err =  0.0028965
+confidence =  0.0028344
+
+kernel =  1
+d =  2
+Accuracy = 99.5655% (1375/1381) (classification)
+acc =  0.99566
+err =  0.0043447
+confidence =  0.0034689
+d =  3
+Accuracy = 99.2035% (1370/1381) (classification)
+acc =  0.99203
+err =  0.0079652
+confidence =  0.0046884
+
+kernel =  2
+Accuracy = 86.7487% (1198/1381) (classification)
+acc =  0.86749
+err =  0.13251
+confidence =  0.017882
+
+kernel =  3
+Accuracy = 33.5264% (463/1381) (classification)
+acc =  0.33526
+err =  0.66474
+confidence =  0.024899
+
+######### C = 10 ########
+C =  10
+
+kernel = 0
+Accuracy = 99.7104% (1377/1381) (classification)
+acc =  0.99710
+err =  0.0028965
+confidence =  0.0028344
+
+kernel =  1
+d =  2
+Accuracy = 99.7828% (1378/1381) (classification)
+acc =  0.99783
+err =  0.0021723
+confidence =  0.0024556
+d =  3
+Accuracy = 99.6379% (1376/1381) (classification)
+acc =  0.99638
+err =  0.0036206
+confidence =  0.0031678
+
+kernel =  2
+Accuracy = 90.8038% (1254/1381) (classification)
+acc =  0.90804
+err =  0.091962
+confidence =  0.015241
+
+kernel =  3
+Accuracy = 31.7161% (438/1381) (classification)
+acc =  0.31716
+err =  0.68284
+confidence =  0.024545
+
+######### C = 100 #########
+C =  100
+
+kernel = 0
+Accuracy = 99.7104% (1377/1381) (classification)
+acc =  0.99710
+err =  0.0028965
+confidence =  0.0028344
+
+kernel =  1
+d =  2
+Accuracy = 99.7828% (1378/1381) (classification)
+acc =  0.99783
+err =  0.0021723
+confidence =  0.0024556
+d =  3
+Accuracy = 99.7828% (1378/1381) (classification)
+acc =  0.99783
+err =  0.0021723
+confidence =  0.0024556
+
+kernel =  2
+Accuracy = 90.7314% (1253/1381) (classification)
+acc =  0.90731
+err =  0.092686
+confidence =  0.015295
+
+kernel =  3
+Accuracy = 67.9218% (938/1381) (classification)
+acc =  0.67922
+err =  0.32078
+confidence =  0.024619

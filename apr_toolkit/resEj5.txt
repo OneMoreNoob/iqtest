@@ -1,0 +1,170 @@
+
+########## C = 0.01 ##########
+C =  0.010000
+
+
+kernel = 0
+Accuracy = 93.1739% (1870/2007) (classification)
+acc =  0.93174
+err =  0.068261
+confidence =  0.011034
+
+kernel =  1
+d =  2
+Accuracy = 72.5461% (1456/2007) (classification)
+acc =  0.72546
+err =  0.27454
+confidence =  0.019525
+d =  3
+Accuracy = 55.6054% (1116/2007) (classification)
+acc =  0.55605
+err =  0.44395
+confidence =  0.021737
+
+kernel =  2
+Accuracy = 74.6886% (1499/2007) (classification)
+acc =  0.74689
+err =  0.25311
+confidence =  0.019023
+
+kernel =  3
+Accuracy = 63.3284% (1271/2007) (classification)
+acc =  0.63328
+err =  0.36672
+confidence =  0.021084
+
+########## C = 0.1 ##########
+C =  0.10000
+
+
+kernel = 0
+Accuracy = 92.8251% (1863/2007) (classification)
+acc =  0.92825
+err =  0.071749
+confidence =  0.011291
+
+kernel =  1
+d =  2
+Accuracy = 90.0349% (1807/2007) (classification)
+acc =  0.90035
+err =  0.099651
+confidence =  0.013105
+d =  3
+Accuracy = 85.4011% (1714/2007) (classification)
+acc =  0.85401
+err =  0.14599
+confidence =  0.015448
+
+kernel =  2
+Accuracy = 91.4798% (1836/2007) (classification)
+acc =  0.91480
+err =  0.085202
+confidence =  0.012214
+
+kernel =  3
+Accuracy = 88.8889% (1784/2007) (classification)
+acc =  0.88889
+err =  0.11111
+confidence =  0.013749
+
+########## C = 1 ##########
+C =  1
+
+
+kernel = 0
+Accuracy = 92.6258% (1859/2007) (classification)
+acc =  0.92626
+err =  0.073742
+confidence =  0.011434
+
+kernel =  1
+d =  2
+Accuracy = 93.5227% (1877/2007) (classification)
+acc =  0.93523
+err =  0.064773
+confidence =  0.010768
+d =  3
+Accuracy = 92.8749% (1864/2007) (classification)
+acc =  0.92875
+err =  0.071251
+confidence =  0.011254
+
+kernel =  2
+Accuracy = 94.2202% (1891/2007) (classification)
+acc =  0.94220
+err =  0.057798
+confidence =  0.010210
+
+kernel =  3
+Accuracy = 88.8391% (1783/2007) (classification)
+acc =  0.88839
+err =  0.11161
+confidence =  0.013776
+
+########## C = 10 ##########
+C =  10
+
+
+kernel = 0
+Accuracy = 92.576% (1858/2007) (classification)
+acc =  0.92576
+err =  0.074240
+confidence =  0.011470
+
+kernel =  1
+d =  2
+Accuracy = 94.569% (1898/2007) (classification)
+acc =  0.94569
+err =  0.054310
+confidence =  0.0099151
+d =  3
+Accuracy = 93.8216% (1883/2007) (classification)
+acc =  0.93822
+err =  0.061784
+confidence =  0.010533
+
+kernel =  2
+Accuracy = 95.0174% (1907/2007) (classification)
+acc =  0.95017
+err =  0.049826
+confidence =  0.0095194
+
+kernel =  3
+Accuracy = 83.707% (1680/2007) (classification)
+acc =  0.83707
+err =  0.16293
+confidence =  0.016157
+
+########## C = 100 ##########
+C =  100
+
+
+kernel = 0
+Accuracy = 92.576% (1858/2007) (classification)
+acc =  0.92576
+err =  0.074240
+confidence =  0.011470
+
+kernel =  1
+d =  2
+Accuracy = 94.3697% (1894/2007) (classification)
+acc =  0.94370
+err =  0.056303
+confidence =  0.010085
+d =  3
+Accuracy = 94.1206% (1889/2007) (classification)
+acc =  0.94121
+err =  0.058794
+confidence =  0.010292
+
+kernel =  2
+Accuracy = 94.9178% (1905/2007) (classification)
+acc =  0.94918
+err =  0.050822
+confidence =  0.0096091
+
+kernel =  3
+Accuracy = 80.568% (1617/2007) (classification)
+acc =  0.80568
+err =  0.19432
+confidence =  0.017311
