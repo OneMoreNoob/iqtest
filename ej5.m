@@ -23,29 +23,15 @@ for C = [0.01, 0.1, 1, 10, 100 ]
                 acc = accuracy(1) / 100
                 err = 1 - acc
                 confidence = 1.96*sqrt(acc*err/nElementsTest)
-				vectores = res.SVs;
-				for v = vectores'
-					x = reshape(v,16,16);
-					imshow(x')
-					pause();
-				endfor
-            end
-
+			end
         else
             res = svmtrain(trlabels, tr, ["-q -t ", num2str(kernel), " -c ", num2str(C)]);
             [predicted_labels, accuracy, decission_values] = svmpredict(tslabels, ts, res, '');
             acc = accuracy(1) / 100
             err = 1 - acc
             confidence = 1.96*sqrt(acc*err/nElementsTest)
-			vectores = res.SVs;
-				for v = vectores'
-					x = reshape(v,16,16);
-					imshow(x')
-					pause();
-				endfor
         end
         
-
     end
 
 end
