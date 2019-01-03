@@ -93,16 +93,40 @@ for c=[0.01 0.1 1 10 100 1000]
 
     #representar graficamente marcando los vectores erroneos
 
-	plot(
-		X, Y, 'g',
-		X, Y1, 'b',
-		X, Y2, 'r',
-		tr(trlabels==1,1), tr(trlabels==1,2), 'sr',
-		tr(trlabels==2,1), tr(trlabels==2,2), '.b',
-		tr(tolerancia_margen!=0,1), tr(tolerancia_margen!=0,2), "xk",
-		res.SVs(tolerancia_margen_sv==0,1),res.SVs(tolerancia_margen_sv==0,2), "+k"
-	);
-	
+	t = 0:1:7;
+	plot(tr(trlabels==1,1), tr(trlabels==1,2),"sr","markersize",7,"markerfacecolor",[0.7,0.3,0.3],
+		tr(trlabels==2,1), tr(trlabels==2,2),"ob","markersize",8,"markerfacecolor",[0.3,0.3,0.7],
+		t, -t*vect_pesos(1)/vect_pesos(2) - (umbral/vect_pesos(2)), "linewidth",2.5, "color", [0.4,0.4,0.4],
+		t, -t*vect_pesos(1)/vect_pesos(2) - ((umbral+1.0)/vect_pesos(2)), "linewidth",1.5,
+		t, -t*vect_pesos(1)/vect_pesos(2) - ((umbral-1.0)/vect_pesos(2)), "linewidth",1.5,
+		tr(tolerancia_margen!=0,1), tr(tolerancia_margen!=0,2), "x", "markersize", 15, "color", "black",
+		res.SVs(tolerancia_margen_sv==0,1),res.SVs(tolerancia_margen_sv==0,2), "+", "markersize", 18, "color", "black");
+
+	#rotular los puntos con sus valores de alfa y tolerancia nulos
+	for i = 1:rows(tr)
+		if (length(find(res.sv_indices ==i)) == 0)
+		text(tr(i,1)+0.15,tr(i,2),	sprintf("0.00"),"FontSize", 10)
+		text(tr(i,1)-0.07,tr(i,2)+0.3,sprintf("0.00"),"FontSize", 10)
+		endif
+	endfor
+
+	#rotular los puntso con sus valores de alfa y tolerancias no nulos
+	for i = 1:rows(res.sv_indices)
+		text(tr(res.sv_indices(i), 1)+0.15, tr(res.sv_indices(i),2),
+		sprintf("%4.2f",tolerancia_margen_sv(i)), "FontSize", 10)
+		text(tr(res.sv_indices(i),1)-0.07, tr(res.sv_indices(i),2)+0.3,
+		sprintf("%4.2f", abs(res.sv_coef(i))),"FontSize",10)
+	endfor
+
+	text(0.4, 0.65, sprintf("C = %4.2f", c), "FontSize", 10);
+	text(0.4, 0.35, sprintf("marg = %4.2f", 2/norm(vect_pesos)), "FontSize", 10);
+	title(sprintf("data: %s, C = %4.2f, margin = %4.2f",
+		"Results", c, 2/norm(vect_pesos)));
+
+	axis([0,7,0,7], "equal");
+	grid on;
+
+	print -dps -color plotSWM.eps;
 	pause();
 endfor
 
