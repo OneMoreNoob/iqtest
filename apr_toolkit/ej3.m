@@ -64,26 +64,6 @@ for c=[0.01 0.1 1 10 100 1000]
     # margen
     margen = 1/(vect_pesos*vect_pesos');
 
-	# calcular parametros de la frontera lineal
-	m = - vect_pesos(1)/vect_pesos(2) ;
-	b = - umbral/vect_pesos(2);
-	b1 = - (umbral - 1) / vect_pesos(2);
-	b2 = - (umbral + 1) / vect_pesos(2);
-
-	# representar graficamente
-	# calcular unos cuantos valores de 'y' y 'x' para dibujar la recta
-
-	X  = [0:1:7];
-	Y  = m * X + b ;
-	Y1 = m * X + b1;
-	Y2 = m * X + b2;
-
-	plot(X, Y, X, Y1, X, Y2,
-	tr(trlabels==1, 1), tr(trlabels==1, 2), 'x',
-    tr(trlabels==2, 1), tr(trlabels==2, 2), 's',
-    tr(res.sv_indices, 1), tr(res.sv_indices, 2), '+');
-	pause;
-
     # tolerancia de margen (diapositiva 4.17)
     tolerancia_margen_sv = (abs(mult_lagrange) == c) .* (1 - sign(mult_lagrange) .* (vect_soporte * vect_pesos' + umbral));
 	tolerancia_margen = zeros(size(trlabels));
