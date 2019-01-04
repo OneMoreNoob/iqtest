@@ -105,8 +105,9 @@ for c=[0.01 0.1 1 10 100 1000]
 
 	axis([0,7,0,7], "equal");
 	grid on;
-
-	print -dps -color plotSWM.eps;
+	
+	string = ["plotSWM", num2str(c), ".eps"];
+	print(string, "-dps","-color");
 	pause();
 endfor
 
